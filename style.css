@@ -167,7 +167,14 @@ nav{
     font-size: 18px;
     padding: 13px 22px;
     background: white;
+    border: 1px solid white;
     border-radius: 10px;
+    transition: 0.3s linear;
+}
+#banner .flex .info button:hover{
+    color: white;
+    background-color: #5956E8;
+    border: 1px solid white;
 }
 #banner .flex .img{
     max-width: 479px;
@@ -203,10 +210,22 @@ nav{
     display: grid;
     grid-template-rows: 1fr;
 }
-.banner1 .item .item_info .img{
+.banner1 .item .item_info :hover svg{
+    fill: #5956E8;
+}
+.banner1 .item .item_info :hover svg path{
+    fill: white;
+}
+/* .banner1 .item .item_info .img{
     width: 71px;
     height: 71px;
+    background-color: #5956E8;
+    color: white;
+    border-radius: 10px;
 }
+.banner1 .item .item_info .img img{
+    color: white;
+} */
 .banner1 .item .item_info h3{
     font-size: 25px;
     font-weight: bold;
@@ -244,12 +263,26 @@ nav{
     color: #181818;
     padding: 23px 28px;
     transition: 0.3s linear;
+    line-height: 70px;
+    display: block;
+    position: relative;
+    cursor: pointer;
 
 }
 .banner2 .all h5:hover{
     color: #5956E8;
-    border-top: 2px solid #5956E8;
-
+}
+.banner2 .all h5::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background-color: #5956E8;
+}
+.banner2 .all h5:hover::after{
+    width: 100%;
 }
 .banner2 .item {
     display: grid;
@@ -325,6 +358,39 @@ nav{
 .banner3 .our .img{
     width: 370px;
     height: 444px;
+    position: relative;
+}
+.banner3 .our .img::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(2deg,rgba(79, 96,232,1) 0%, rgba(0, 0, 0,0) 40%);
+    opacity: 0%;
+    transition: 0.5s linear;
+}
+.banner3 .our .img:hover::before{
+    opacity: 100%;
+}
+
+.banner3 .our .text{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top: -130px;
+    position: relative;
+    z-index: 1;
+}
+.banner3 .our .img .text h4{
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+.banner3 .our .img .text h5{
+    font-size: 15px;
 }
 
 
