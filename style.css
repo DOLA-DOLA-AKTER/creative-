@@ -64,7 +64,7 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 25px 80px;
+    padding: 15px 80px;
     z-index: 100;
     background-color: white;
 }
@@ -136,7 +136,7 @@ nav{
 #banner{
     background-color: #5956E8;
     width: 100%;
-    margin-top: 130px;
+    margin-top: 110px;
 }
 #banner .flex{
     display: grid;
@@ -216,16 +216,6 @@ nav{
 .banner1 .item .item_info :hover svg path{
     fill: white;
 }
-/* .banner1 .item .item_info .img{
-    width: 71px;
-    height: 71px;
-    background-color: #5956E8;
-    color: white;
-    border-radius: 10px;
-}
-.banner1 .item .item_info .img img{
-    color: white;
-} */
 .banner1 .item .item_info h3{
     font-size: 25px;
     font-weight: bold;
@@ -275,11 +265,12 @@ nav{
 .banner2 .all h5::after{
     content: "";
     position: absolute;
-    width: 0%;
-    height: 4px;
     top: 0;
     left: 0;
+    width: 0;
+    height: 4px;
     background-color: #5956E8;
+    transition: 0.3s linear;
 }
 .banner2 .all h5:hover::after{
     width: 100%;
@@ -369,21 +360,21 @@ nav{
     height: 100%;
     border-radius: 10px;
     background: linear-gradient(2deg,rgba(79, 96,232,1) 0%, rgba(0, 0, 0,0) 40%);
-    opacity: 0%;
     transition: 0.5s linear;
 }
-.banner3 .our .img:hover::before{
-    opacity: 100%;
-}
-
 .banner3 .our .text{
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
     color: white;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1.5px;
-    margin-top: -130px;
-    position: relative;
     z-index: 1;
+    transition: 0.3s linear;
+}
+.banner3 .our .img:hover .text{
+    bottom: 70px;
 }
 .banner3 .our .img .text h4{
     font-size: 20px;
@@ -455,6 +446,7 @@ nav{
 .our_item .our_item_inner .f{
     display: flex;
     justify-content: space-between;
+    align-items: end;
 }
 
 
